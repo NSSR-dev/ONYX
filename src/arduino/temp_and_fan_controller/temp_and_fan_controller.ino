@@ -2,11 +2,19 @@
 #include <Adafruit_Sensor.h>
 #include <Adafruit_BME280_mod.h>
 
+#define DEBUG 1
+
+#define SER_BAUD_RATE 9600
+
 #define NUM_TEMP_SENSORS 1
 
 #define MAX_FAN_RPS 185
 #define MIN_FAN_RPS 40
+#define FAN_SPEED_DEVIATION_TOLERANCE 20
 
+#define UPDATE_RATE_MILLISECONDS 1000
+
+// SN74HC595N serial in parallel out to BME280 CE pin assignments
 #define BME_PORT1_ASSIGNMENT 6
 #define BME_PORT2_ASSIGNMENT 5
 #define BME_PORT3_ASSIGNMENT 4
@@ -16,6 +24,8 @@
 
 //#define SEALEVELPRESSURE_HPA (1013.25)  //Probably useless for current application
 
+
+// BME280 pin assignments
 #define BME_SCK 13
 #define BME_MISO 11
 #define BME_MOSI 12
@@ -23,33 +33,25 @@
 #define SN74HC595N_RCLOCK 7
 #define SN74HC595N_SRCLOCK 2
 
+// PWM Fan pin assignments
 #define FAN_0 10
 #define FAN_1 9
 #define FAN_2 6
 #define FAN_3 5
 
+// Fan tachometer pin assignments
 #define FAN_0_TACO A1
 #define FAN_1_TACO A2
 #define FAN_2_TACO A3
 #define FAN_3_TACO A4
 
-#define MAX_FAN_RPS 185
-#define MIN_FAN_RPS 40
-#define FAN_SPEED_DEVIATION_TOLERANCE 20
-
-#define DEBUG 1
-#define UPDATE_RATE_MILLISECONDS 1000
-
 float highTemp = 40;
 float lowTemp = 25;
-
 
 unsigned long currentTime;
 unsigned long totalTime;
 unsigned long pulse;
 unsigned int freq;
-
-
 
 unsigned char fanArray[4] = {FAN_0, FAN_1, FAN_2, FAN_3};
 unsigned char fanSpeedArray[4] = {FAN_0_TACO, FAN_1_TACO, FAN_2_TACO, FAN_3_TACO};
@@ -66,6 +68,7 @@ unsigned char i = 0;
 char inputStringBuffer[20];
 char outputStringBuffer[50];
 
+// Instantiate all BME280 temperature sensors
 #if NUM_TEMP_SENSORS >= 1 
   Adafruit_BME280_sn74hc595n bme1(BME_PORT1_ASSIGNMENT, SN74HC595N_SER, SN74HC595N_SRCLOCK, SN74HC595N_RCLOCK, BME_MOSI, BME_MISO, BME_SCK);
 #endif
@@ -86,8 +89,11 @@ char outputStringBuffer[50];
 #endif
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(SER_BAUD_RATE);
   byte i;
+  
+  // TODO: Call a function that will give a unique ID and will get aacknowledgment before proceeding (Make external library)
+  
   for(i=0; i<4; i++){
     pinMode(fanArray[i], OUTPUT);
     digitalWrite(fanArray[i], 1);
@@ -150,6 +156,10 @@ void setup() {
   currentTime = totalTime;
 }
 
+
+// Main program loop 
+// Will constantly adjust fan speed based on current temperature based on UPDATE_RATE_MILLISECONDS and stores all bme280 data
+// Also waits for serial commands and will send requested data
 void loop() {
   if(Serial.available()>0){
     i=0;
@@ -191,7 +201,6 @@ void loop() {
     }
   }
 
-  
   totalTime = millis();
   if(totalTime - currentTime > UPDATE_RATE_MILLISECONDS){
     readTemperatureToArray();
@@ -200,13 +209,9 @@ void loop() {
     //calculateFanSpeedDeviation();
     currentTime = millis();
   }
-  
 }
 
-
-
-
-
+// Set the fan speed based off the current temperature
 inline void setFanSpeed(){
   float x = averageTemperature();
   float m = (-255) / (highTemp - lowTemp);
@@ -238,9 +243,10 @@ inline void setFanSpeed(){
     }
 }
 
-
 //checkFanSpeedDeviation()
 
+
+// Check if fans are spinning at expected speed
 inline void calculateFanSpeedDeviation(){
   for(i=0; i<4; i++){
       speedStatArray[i] = pulseIn(fanSpeedArray[i], HIGH, 2000);
@@ -324,12 +330,14 @@ inline void readHumidityToArray (){
   #endif
 }
 
-
+// TODO: FIX THIS FUNCTION!
+// Create a custom fan performance curve for each fan to deliver the correct power
+// It's expected to take a few minutes (PER FAN!)
+// Will eventually store data in EEPROM so user can manually choose when to recalibrate
 
 inline void calibrateFanRPM(){
   byte i, j, k;
   int temp, high_pwm, low_pwm, high_speed, low_speed;
-
 
   for(i=0; i<4; i++){
     high_pwm = 0; low_pwm = 0; high_speed = 0; low_speed = 0;
@@ -359,5 +367,3 @@ inline void calibrateFanRPM(){
     digitalWrite(fanArray[i],1);
   }
 }
-
-
