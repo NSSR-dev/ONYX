@@ -1,0 +1,181 @@
+@font-face{
+    font-family: raleway-light; 
+    src: url(fonts/Raleway/Raleway-Light.ttf);
+}
+@font-face{
+	font-family: cicle_shadow;
+	src: url('../fonts/Cicle_Shadow.ttf');
+}
+@font-face{
+	font-family: cicle;
+	src: url('../fonts/Cicle_Semi.ttf');
+}
+@font-face{
+	font-family: spaceman;
+	src: url('../fonts/SPACEMAN.TTF');
+}
+html,body{
+    border:none; padding:0; margin:0;
+    color:#202020;
+}
+body{
+    text-align:center;
+    font-family:raleway-light;
+    background-image: url("img/bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-color: #cccccc;
+    width:100%;
+    height:100%;
+}
+h1{
+    color:#404040;
+}
+#startStopBtn{
+    font-size:25px;
+    display:inline-block;
+    margin:0 auto;
+    color:#B89D38;
+    background-color:#ccc;
+    border:0.15em solid #B89D38;
+    border-radius:0.3em;
+    transition:all 0.3s;
+    box-sizing:border-box;
+    width:80%; height:3em;
+    line-height:2.7em;
+    cursor:pointer;
+    box-shadow: 0 0 0 rgba(0,0,0,0.1), inset 0 0 0 rgba(0,0,0,0.1);
+}
+#startStopBtn:hover{
+    box-shadow: 0 0 2em rgba(0,0,0,0.1), inset 0 0 1em rgba(0,0,0,0.1);
+}
+#startStopBtn.running{
+    background-color:#00466C;
+    border-color:#B89D38;
+    color:#B89D38;
+}
+#startStopBtn:before{
+    content:"Start";
+}
+#startStopBtn.running:before{
+    content:"Abort";
+}
+#title{
+    width:92%;
+    height: 60px;
+    margin-left:3%;
+    margin-bottom:25px;
+    margin-top:25px;
+    font-size:40px;
+    position: relative;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    padding-top:15px;
+}
+#ret{
+    height:60px;
+    position:absolute;
+    top:10px;
+    left:10px;
+}
+#logo{
+    height:100px;
+    position:absolute;
+    top:-10px;
+    right:10px;
+}
+#test{
+    color: #fff;
+    margin: 0;
+    padding:0;
+    width: 60%;
+    max-height: 20%;
+    position: relative;
+    float:left;
+}
+#sidebar{
+    color: #fff;
+    margin-left: 5%;
+    width:30%;
+    padding-top:25px;
+    height:300px;
+    position: relative;
+    float:left;
+    text-align:center;
+    background-color: rgba(0,0,0,0.5);
+}
+div.testArea{
+    margin-bottom:25px;
+    display:relative;
+    float:left;
+    width:45%;
+    margin-left:5%;
+    height:150px;
+    position:relative;
+    box-sizing:border-box;
+    background-color: rgba(0,0,0,0.5);
+}
+div.testName{
+    position:absolute;
+    top:0.1em; left:0;
+    width:100%;
+    font-size:1.4em;
+    z-index:9;
+}
+div.meterText{
+    position:absolute;
+    bottom:1.55em; left:0;
+    width:100%;
+    font-size:2.5em;
+    z-index:9;
+}
+div.meterText:empty:before{
+    content:"0.00";
+}
+div.unit{
+    position:absolute;
+    bottom:2em; left:0;
+    width:100%;
+    z-index:9;
+}
+div.testArea canvas{
+    position:absolute;
+    top:0; left:0; width:100%; height:100%;
+    z-index:1;
+}
+div.testGroup{
+    width:100%;
+}
+@media all and (max-width:65em){
+    body{
+        font-size:1.5vw;
+    }
+}
+@media all and (max-width:40em){
+    body{
+        font-size:0.8em;
+    }
+    div.testGroup{
+        display:block;
+        margin: 0 auto;
+    }
+}
+
+#progressBar{
+    width:90%;
+    height:1em;
+    background-color:#EEEEEE;
+    position:relative;
+    display:block;
+    margin:0 auto;
+    margin-bottom:2em;
+}
+#progress{
+    position:absolute;
+    top:0; left:0;
+    height:100%;
+    width:0%;
+    transition: width 2s;
+    background-color:#B89D38;
+}

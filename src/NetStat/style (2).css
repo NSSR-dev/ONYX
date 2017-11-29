@@ -1,0 +1,549 @@
+/*
+* Omega Analytics Systems Ltd.
+* Copyright © 2017 Omega Analytics Systems Ltd.
+* All rights reserved.
+*/
+/*
+Fonts
+*/
+@font-face{
+	font-family: cicle_shadow;
+	src: url('../fonts/Cicle_Shadow.ttf');
+}
+@font-face{
+	font-family: cicle;
+	src: url('../fonts/Cicle_Semi.ttf');
+}
+@font-face{
+	font-family: spaceman;
+	src: url('../fonts/SPACEMAN.TTF');
+}
+/*
+Main Containers
+*/
+html{
+	height:100%;
+	width:100%;
+}
+body{
+	font-family:cicle;
+	background-color:rgb(60,60,60);
+	color:rgb(228,227,225);
+	margin:0;
+	height:100%;
+	width:100%;
+}
+.No_Overflow{
+	overflow: hidden;
+}
+/*
+Common Tags
+*/
+pre{
+	margin:0;
+}
+h1{
+	font-family: cicle;
+	text-align:center;
+	color:rgb(228,227,225);
+	margin:0;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-size: 20px;
+}
+h2{
+	font-family: cicle;
+	color:rgb(184,158,64);
+	margin:0;
+	font-size:20px;
+}
+p{
+	margin:0;
+	display:inline;
+	font-size:15px;
+	text-align:center;
+}
+a{
+	text-decoration: none;
+	font-size:15px;
+	color:rgb(184,158,64);
+}
+li > a{
+	font-size: 20px;
+}
+a:hover{
+	color:#ccc;
+}
+i{
+	font-style: normal;
+}
+/*
+Loaders
+*/
+#loading{
+    border: 16px solid rgb(0,76,112); /* Blue */
+    border-top: 16px solid rgb(184,158,64); /* Gold */
+    border-radius: 50%;
+	top:50%;
+	left:50%;
+	position: absolute;
+	width: 250px;
+	height: 250px;
+    margin-top: -125px;
+    margin-left: -125px;
+	animation: spin 2s linear infinite;
+}
+#Loading_Image{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: -75px;
+    margin-left: -75px;
+	z-index: 2;
+    display: block;
+}
+/*
+Animations
+*/
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@-webkit-keyframes animatebottom {
+  from { bottom:-400px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+@keyframes animatebottom { 
+  from{ bottom:-400px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+/*
+Containers & Sections
+*/
+* {
+    box-sizing: border-box;
+}
+
+.col-0-5 {width: 4.16%;}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-4-5 {width: 37.5%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+.col-24 {width: 200%;}
+
+[class*="col-"] {
+    float: left;
+	padding:0.5%;
+}
+
+.row{
+    display: none;
+	position: relative;
+	-webkit-animation-name: animatebottom;
+	-webkit-animation-duration: 1s;
+	animation-name: animatebottom;
+	animation-duration: 1s;
+	overflow: hidden; 
+	
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+td{
+	height:50px;
+	padding: 1px;
+}
+
+#specTitle{
+	font-family: spaceman;
+	color:rgb(184,158,64);
+	margin-top:5px;
+	font-size:30px;
+	text-align: left;
+	padding-left:10px;
+}
+#return{
+	width:50px;
+	height:50px;
+	margin-right:10px;
+}
+.mainCont{
+	margin-top:90px;
+}
+.nopad{
+	padding:0;
+}
+.title{
+	height:50px;
+    background-color: rgb(60,60,60);
+}
+#Nav_Container{
+    transition: margin-left .5s;
+}
+.contNav {
+	border-right:10px solid rgb(60,60,60);
+	border-left:10px solid rgb(60,60,60);
+    position: relative;
+	padding:0;
+}
+.Section_Footer{
+	bottom:0;
+	margin-top:20px;
+	margin-bottom:0;
+	text-align:center;
+	width:100%;
+	background-color:rgb(52,52,52);
+	text-align:center;
+	border-top:1px solid rgb(184,158,64);
+}
+.Section_Footer_Landing{
+	bottom:0;
+	margin-top:20px;
+	margin-bottom:0;
+	text-align:center;
+	width:100%;
+	background-color:rgb(52,52,52);
+	text-align:center;
+	position:fixed;
+	border-top:1px solid rgb(184,158,64);
+}
+.Section_Header{
+	text-align:center;
+	background-color:rgb(52,52,52);
+	border-bottom:1px solid rgb(184,158,64);
+	color:rgb(184,158,64);
+}
+#Header_Fixed{
+	z-index:99;
+	height: 40px;
+}
+#Header_Hidden_1{
+	display:none;
+}
+#Header_Hidden_2{
+	display:none;
+}
+#Header_SubTitle{
+	font-family: spaceman;
+	color:rgb(184,158,64);
+	font-size:30px;
+	text-align: left;
+	padding-left:10px;
+}
+.Section_Separator{
+	height:30px;
+	background-color:rgb(52,52,52);
+	width:100%;
+	border-top:1px solid rgb(184,158,64);
+	border-bottom:1px solid rgb(184,158,64);
+}
+
+.textFrame{
+	vertical-align:middle;
+	height:100%;
+	width:25%;
+    top: 30%;
+	position:absolute;
+}
+.textFrame > h1{
+	margin-bottom:20px;
+}
+.textFrame > h2{
+	text-align:left;
+}
+.textFrame > * >h2{
+	text-align:left;
+}
+td > h2{
+	text-align:left;
+}
+.textFrame > *{
+	word-wrap: break-word;
+	white-space: pre-line;
+}
+/*
+Logos/Images
+*/
+#OAS_Logo{
+	height:40px;
+	margin-top:5px;
+}
+#OAS_Logo_Small{
+	height:30px;
+	padding-top:8px;
+	padding-right:10px;
+}
+
+.logonlogos{
+	border-radius: 50%;
+	border:1px solid rgb(184,158,64);
+    width:30px;
+	height:30px;
+
+}
+.icons{
+    width:40px;
+    float:right;
+    margin:0;
+    padding:0;
+    padding-right:10px;
+    margin-top:10px;
+    cursor:pointer;
+}
+.icons_products{
+    width:40px;
+    float:left;
+    margin:0;
+    padding:0;
+    margin-right:5px;
+    cursor:pointer;
+}
+.icons:hover{   
+    opacity: 0.6;
+}
+.icons_products:hover{   
+    opacity: 0.6;
+}
+.dl_icons{
+    width:40px;
+    float:left;
+    margin:0;
+    padding:0;
+    cursor:pointer;
+}
+.dl_icons:hover{   
+    opacity: 0.6;
+}
+#User_Section{
+	text-align:left;
+}
+#User_Logo{
+    width:40px;
+	height:40px;
+    float:right;
+    margin:0;
+    padding:0;
+    margin-right:10px;
+    margin-top:5px;
+	border:2px solid rgb(184,158,64);
+	border-radius: 50%;
+}
+.prevPNG{
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	border:2px outset rgb(184,158,64);
+	border-radius: 50%;
+    margin-bottom:10px;
+}
+.prevPNG:hover{
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+	-webkit-filter: grayscale(100%) blur(3px);
+	filter: grayscale(100%) blur(3px);
+	cursor:pointer;
+	border:2px outset rgb(184,158,64);
+	border-radius: 50%;
+}
+.boxPNG{
+	border:2px dashed rgb(184,158,64);
+	border-radius:10px;
+	position:relative;
+	margin-top:40px;
+	padding-top:40px;
+	padding-bottom:20px;
+	overflow:hidden; 
+	padding-right:8.33%;
+	height:65%;
+    background-color: rgb(60,60,60);
+	padding-left:8.33%;
+}
+#boxPNG_Left{
+	padding-left:8.33%;
+}
+.contPNG_small{
+	margin-left:5.9%;
+    position: relative;
+}
+.middle:hover {
+	cursor:pointer;
+}
+.prevTEXT{
+	padding:5px;
+}
+.obj p{
+	padding:5px;
+}
+.Frame{
+	text-align: center;
+}
+.contObj{
+	position:absolute;
+	right:0;
+	right:50px;
+	z-index: 3;
+	top: 10px;
+	padding:15px;
+    background-color: rgb(60,60,60);
+}
+
+
+.Ins_Apply{
+	height:30px;
+	border: 2px solid rgb(0,76,112);
+	background-color:rgb(255,255,255);
+	color:rgb(0,76,112);
+	font-family:cicle;
+	font-size:15px;
+	padding:0;
+	padding-left: 10px;
+	margin-bottom:20px;
+}
+.Nav_List > li{
+	text-align:left;
+	font-size:20px;
+	cursor:pointer;
+	color:rgb(184,158,64);
+}
+.Nav_List > li:hover{
+	text-decoration:underline;
+}
+
+/* 
+SETTINGS Page
+*/
+#popupbox{
+	width: 100%; 
+	height: 100%;
+	background-color: rgba(60,60,60, 0.7);
+	position: absolute; 
+	z-index: 9; 
+	visibility: hidden; 
+}
+#verifyForm{
+	margin: 0; 
+	margin-left: 40%; 
+	margin-right: 40%;
+	margin-top: 250px; 
+	padding-top: 50px; 
+	width: 20%; 
+	height: 250px; 
+	position: absolute; 
+	opacity:1;
+	background-color: rgb(52,52,52);
+	z-index: 10; 
+	font-family: cicle; 
+	border:3px solid rgb(184,158,64);
+	border-radius: 3px;
+	text-align:center;
+}
+#logonclose{
+	bottom:0;
+	margin-bottom:5px;
+}
+
+/* 
+MANAGEMENT Page
+*/
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 34px;
+}
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: #B89D38;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #B89D38;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+/* 
+SCROLL BAR - ALL PAGES
+*/
+
+body::-webkit-scrollbar {
+    width: 10px;
+	outline: 1px solid #B89D38;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+}
+ 
+body::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+  background-color: #ccc;
+  border: 1px solid #B89D38;
+}
+
+
+/* 
+SALES Page
+*/
+
+/* AMCHART MAP */
+#map > div > div > a { display: none !important; }
+
+#MapTable{}
+
+#MapTable > tbody > tr > td{
+	background-color: rgb(52,52,52);
+	padding-left:10px;
+	/* border: 1px solid rgb(52,52,52); */
+}
