@@ -1,0 +1,3 @@
+This plugin provides [cff][b]CPU Frequency, CPU Load, Core Temperature[/b][/c] and [cff][b]Distance to TJMax[/b][/c] information for all Intel Core based CPUs.  
+
+Use RealTemp if you need to adjust TJMax or your Calibration settings.  You will need to restart RivaTuner after making any calibration adjustments in RealTemp.
