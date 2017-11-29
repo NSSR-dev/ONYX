@@ -1,0 +1,430 @@
+
+
+/* FONTS */
+
+@font-face {
+    font-family: 'Qokijo';
+    src: url('../fonts/Qokijo.ttf');
+}
+@font-face {
+    font-family: 'mistervampire';
+    src: url('../fonts/fonty.ttf');
+}
+@font-face {
+    font-family: 'burnstowndam';
+    src: url('../fonts/burnstowndam.ttf');
+}
+
+html, body, div, span, applet, object, iframe,
+h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+.about {
+  margin: 70px auto 40px;
+  padding: 8px;
+  width: 260px;
+  font: 10px/18px 'Lucida Grande', Arial, sans-serif;
+  color: #666;
+  text-align: center;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.25);
+  background: #eee;
+  background: rgba(250, 250, 250, 0.8);
+  border-radius: 4px;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 6px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.about a {
+  color: #333;
+  text-decoration: none;
+  border-radius: 2px;
+  -webkit-transition: background 0.1s;
+  -moz-transition: background 0.1s;
+  -o-transition: background 0.1s;
+  transition: background 0.1s;
+}
+.about a:hover {
+  text-decoration: none;
+  background: #fafafa;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.about-links {
+  height: 30px;
+}
+.about-links > a {
+  float: left;
+  width: 50%;
+  line-height: 30px;
+  font-size: 12px;
+}
+
+.about-author {
+  margin-top: 5px;
+}
+.about-author > a {
+  padding: 1px 3px;
+  margin: 0 -1px;
+}
+
+/*
+ * Copyright (c) 2012-2013 Thibaut Courouble
+ * http://www.cssflow.com
+ *
+ * Licensed under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
+body, .login-submit, .login-submit:before, .login-submit:after {
+  background: #373737 url("../img/bg.png") 0 0 repeat;
+}
+
+body {
+  font: 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #404040;
+}
+
+a {
+  color: #FF7F50;
+  text-decoration: none;
+  font-family: 'Qokijo';
+}
+a:hover {
+  text-decoration: underline;
+}
+
+#Box{
+  position:relative;
+  margin: 100px auto 0 auto;
+  width:420px;
+  height: 120px;
+  padding: 20px;
+  border-style: solid;
+  border-color: #FF7F50;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+h1.Title{
+  font-family: 'burnstowndam';
+  font-size: 70px;
+  font-weight: 300;
+  color: #FF7F50;
+  text-align: center;
+  top: 50px;
+  position: relative;
+}
+
+.banner{
+  font-family: 'burnstowndam';
+  font-size: 40px;
+  font-weight: 300;
+  color: #FF7F50;
+  background-color: black;
+  height: 50px;
+  width:100%;
+  margin-top:20px;
+  padding-top: 20px;
+  position: relative;
+  text-align:center;
+}
+
+h1.BannerTitle{
+  position:relative;
+  margin: 0 auto;
+  
+
+}
+
+.jumbotron{
+  width:80%;
+  margin-top:50px;
+  margin-left:10%;
+  
+  font-family: 'Qokijo';
+  color: #FF7F50;
+  font-size: 20px;
+  font-weight: 300;
+  position:absolute;
+}
+
+.column{
+  width:30%;
+  left:4%;
+  top:10%;
+  height:90%;
+  position:relative;
+  float:left;
+  text-align:center;
+  
+}
+
+h2.TextColumn{
+  margin-top:10px;
+  margin-bottom:20px;
+  position:relative
+}
+
+
+
+.img{
+  height:150px;
+  top:20px;
+  bottom:20px;
+  position:static;
+  border-style: solid;
+  border-color: #FF7F50;
+  border-width: 1px;
+  border-radius: 50%;
+  
+}
+
+.Else{
+  position:relative;
+  margin: 20px auto;
+  width:420px;
+  height: 120px;
+  padding: 20px;
+  border-style: solid;
+  border-color: #FF7F50;
+  border-width: 2px;
+  border-radius: 10px;
+  font-family: 'Qokijo';
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 150%;
+  color: #fff;
+}
+
+.login {
+  position: relative;
+  width: 350px;
+  padding-right: 32px;
+  font-weight: 300;
+  color: #fff;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+}
+.login p {
+  margin: 0 0 10px;
+}
+
+input, button, label {
+  font-family: 'mistervampire';
+  font-size: 15px;
+  font-weight: 300;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input[type=text], input[type=password] {
+  font-family: 'Verdana';
+  padding: 0 10px;
+  width: 250px;
+  height: 40px;
+  color: #bbb;
+  text-shadow: 1px 1px 1px black;
+  background: rgba(0, 0, 0, 0.16);
+  border: 0;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+}
+input[type=text]:focus, input[type=password]:focus {
+  color: white;
+  background: rgba(0, 0, 0, 0.1);
+  outline: 0;
+}
+
+label {
+  float: left;
+  width: 100px;
+  line-height: 40px;
+  padding-right: 10px;
+  font-weight: 100;
+  text-align: right;
+  letter-spacing: 1px;
+}
+
+.forgot-password {
+  padding-left: 100px;
+  font-size: 13px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+.login-submit {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  border-radius: 32px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+}
+.login-submit:before, .login-submit:after {
+  content: '';
+  z-index: 1;
+  position: absolute;
+}
+.login-submit:before {
+  top: 28px;
+  left: -4px;
+  width: 4px;
+  height: 10px;
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.06);
+}
+.login-submit:after {
+  top: -4px;
+  bottom: -4px;
+  right: -4px;
+  width: 36px;
+}
+
+.login-button {
+  position: relative;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  padding: 0 0 48px;
+  /* Fix wrong positioning in Firefox 9 & older (bug 450418) */
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  background: none;
+  border: 0;
+  border-radius: 24px;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.1);
+  /* Must use another pseudo element for the gradient background because Webkit */
+  /* clips the background incorrectly inside elements with a border-radius.     */
+}
+.login-button:before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  background: #FF7F50;
+  border-radius: 24px;
+  background-image: -webkit-linear-gradient(top, #FF7F50, #FF7F50);
+  background-image: -moz-linear-gradient(top, #FF7F50, #FF7F50);
+  background-image: -o-linear-gradient(top, #FF7F50, #FF7F50);
+  background-image: linear-gradient(to bottom, #FF7F50, #FF7F50);
+  -webkit-box-shadow: inset 0 0 0 1px #FF7F50, 0 0 0 5px rgba(0, 0, 0, 0.16);
+  box-shadow: inset 0 0 0 1px #FF7F50, 0 0 0 5px rgba(0, 0, 0, 0.16);
+}
+.login-button:active:before {
+  background: #FF7F50;
+  background-image: -webkit-linear-gradient(top, #FF7F50, #FF7F50);
+  background-image: -moz-linear-gradient(top, #FF7F50, #FF7F50);
+  background-image: -o-linear-gradient(top, #FF7F50, #FF7F50);
+  background-image: linear-gradient(to bottom, #FF7F50, #FF7F50);
+}
+.login-button:after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  width: 25px;
+  height: 19px;
+  background: url("../img/arrow.png") 0 0 no-repeat;
+}
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.lt-ie9 input[type=text], .lt-ie9 input[type=password] {
+  line-height: 40px;
+  background: #282828;
+}
+.lt-ie9 .login-submit {
+  position: absolute;
+  top: 12px;
+  right: -28px;
+  padding: 4px;
+}
+.lt-ie9 .login-submit:before, .lt-ie9 .login-submit:after {
+  display: none;
+}
+.lt-ie9 .login-button {
+  line-height: 48px;
+}
+.lt-ie9 .about {
+  background: #313131;
+}
+
+
+/* Foot Note including Copyright */
+
+sub{
+  color: #FF7F50;
+  text-decoration: none;
+}
+
+.FootNote{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  font-family: 'Qokijo';
+}
+
+
+
