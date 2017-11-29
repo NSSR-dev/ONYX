@@ -1,0 +1,358 @@
+<html>
+<head>
+<link rel='stylesheet' href='style/style.css'>
+<link rel="shortcut icon" type="image/png" href="img/logo.png"/>
+<script src="reader.js"></script>
+<script src="main.js"></script>
+<title>SyxNet</title>
+</head>
+<body onhashchange="main()" onload="load()"> 
+
+	<div id="loading"></div>
+	<img id="Loading_Image" src='img/VI.png'></img>
+
+<div class="row">
+<div id="cat-title" class='reader-sections'></div>
+<img src="img/close.png" id="closebutton" onclick=closeReader()></img>
+<iframe frameBorder="0" id="reader"></iframe>
+<div id="reader-return" class='reader-sections' onclick=closeReader()>BACK</div>
+
+<div class="header" id='header'>
+  <img src="img/logo.png" class="logo">
+  <img src="img/facebook.png" class="icons"></img>
+  <img src="img/insta.png" class="icons"></img>
+  <img src="img/google.png" class="icons"></img>
+  <img src="img/youtube.png" class="icons"></img>
+  <img src="img/linkedin.png" class="icons"></img>
+  <img src="img/github.png" class="icons"></img>
+  <img src="img/twitter.png" class="icons"></img>
+  <h1>SYXNET.TECH <span id="cat-sub"> //Documentation</span></h1>
+
+</div>
+<div id='content'>
+    <ul class="menu-title">
+        <div class="title"><h1>IT</h1></div>
+        <div class="title"><h1>Development</h1></div>
+        <div class="title"><h1>Other</h1></div>
+    </ul>
+    <ul class="menu-cat">
+        <ul class="menu-root c1" id='IT'>
+        <div class="mob-title"><h1>IT</h1></div>
+            <li>
+                <a class="section-link active" data-scroll="" href="#IT-Windows">
+                <small>
+                    OS
+                </small>
+                Microsoft
+                </a>
+                <ul class="menu-sub">
+                <li>
+                    <a class="section-link" data-scroll="" href="#Windows">
+                    Windows
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#Windows-Server">
+                    Windows Server
+                    <var>
+                        new
+                    </var>
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#Windows-Mobile">
+                    Windows Mobile
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#performance">
+                    Office
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <li>
+                <a class="section-link" data-scroll="" href="#Global-API">
+                <small>
+                    OS
+                </small>
+                Linux
+                </a>
+                <ul class="menu-sub">
+                <li>
+                    <a class="section-link" data-scroll="" href="#Vue-mixin">
+                    Ubuntu
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#Vue-compile">
+                    Red Hat
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#Vue-version">
+                    Raspberry Pi
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <li>
+                <a class="section-link" data-scroll="" href="#IT-Mac">
+                <small>
+                    OS
+                </small>
+                Mac
+                </a>
+                <ul class="menu-sub">
+                <li>
+                    <a class="section-link" data-scroll="" href="#beforeDestroy">
+                    beforeDestroy
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#destroyed">
+                    destroyed
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <li>
+                <a class="section-link" data-scroll="" href="#Options-Data">
+                <small>
+                    Infrastructure
+                </small>
+                Cloud
+                </a>
+                <ul class="menu-sub">
+                <li>
+                    <a class="section-link" data-scroll="" href="#Azure">
+                    Azure
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#props">
+                    AWS
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#propsData">
+                    Digital Ocean
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#computed">
+                    Heroku
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#methods">
+                    Bitnami
+                    </a>
+                </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="menu-root c2" id='Dev'>
+        <div class="mob-title"><h1>Development</h1></div>
+            <li>
+                <a class="section-link" data-scroll="" href="#Options-DOM">
+                <small>
+                    Coding
+                </small>
+                Web Development
+                </a>
+                <ul class="menu-sub">
+                <li>
+                    <a class="section-link" data-scroll="" href="#HTML">
+                    HTML
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#CSS">
+                    CSS
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#PHP">
+                    PHP
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#MYSQL">
+                    MySQL 
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#nodejs">
+                    Node.js 
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#Wordpress">
+                    Wordpress 
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <li>
+                <a class="section-link" data-scroll="" href="#Options-Assets">
+                <small>
+                    Options
+                </small>
+                Assets
+                </a>
+                <ul class="menu-sub">
+                <li>
+                    <a class="section-link" data-scroll="" href="#directives">
+                    directives
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#filters">
+                    filters
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#components">
+                    components
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <li>
+                <a class="section-link" data-scroll="" href="#Options-Composition">
+                <small>
+                    Options
+                </small>
+                Composition
+                </a>
+                <ul class="menu-sub">
+                <li>
+                    <a class="section-link" data-scroll="" href="#parent">
+                    parent
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#mixins">
+                    mixins
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#extends">
+                    extends
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#provide-inject">
+                    provide / inject 
+                    <var>
+                        2.2
+                    </var>
+                    </a>
+                </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="menu-root c3" id='Oth'>
+        <div class="mob-title"><h1>Other</h1></div>
+            <li class="directives hooks">
+                <a>
+                Directives 
+                <small>
+                    Hooks
+                </small>
+                </a>
+                <ul class="menu-sub">
+                <li>
+                    <a href="https://vuejs.org/v2/guide/custom-directive.html#Hook-Functions">
+                    bind
+                    </a>
+                </li>
+                <li>
+                    <a href="https://vuejs.org/v2/guide/custom-directive.html#Hook-Functions">
+                    inserted
+                    </a>
+                </li>
+                <li>
+                    <a href="https://vuejs.org/v2/guide/custom-directive.html#Hook-Functions">
+                    update
+                    </a>
+                </li>
+                <li>
+                    <a href="https://vuejs.org/v2/guide/custom-directive.html#Hook-Functions">
+                    componentUpdated
+                    </a>
+                </li>
+                <li>
+                    <a href="https://vuejs.org/v2/guide/custom-directive.html#Hook-Functions">
+                    unbind
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <li>
+                <a class="section-link" data-scroll="" href="#Special-Attributes">
+                <small>
+                    html
+                </small>
+                Attributes
+                </a>
+                <ul class="menu-sub">
+                <li>
+                    <a class="section-link" data-scroll="" href="#key">
+                    key
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#ref">
+                    ref
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#slot">
+                    slot
+                    </a>
+                </li>
+                </ul>
+            </li>
+            <li>
+                <a class="section-link" data-scroll="" href="#Built-In-Components">
+                <small>
+                    Built-In
+                </small>
+                Components
+                </a>
+                <ul class="menu-sub">
+                <li>
+                    <a class="section-link" data-scroll="" href="#component">
+                    component
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#transition">
+                    transition
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#transition-group">
+                    transition-group
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#keep-alive">
+                    keep-alive
+                    </a>
+                </li>
+                <li>
+                    <a class="section-link" data-scroll="" href="#slot-1">
+                    slot
+                    </a>
+                </li>
+                </ul>
+            </li>
+        </ul>
+    </ul>
+<div>
+    </div>
+</body>
+</html>
