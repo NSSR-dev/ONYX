@@ -142,9 +142,9 @@ noUiSlider.create(range, {
 		'max': 255
 	},
 	pips: { // Show a scale with the slider
-		mode: 'steps',
+		mode: 'range',
 		stepped: true,
-		density: 4
+		density: 5
 	}
 });
 
