@@ -148,8 +148,3 @@ noUiSlider.create(range, {
 	}
 });
 
-var lUpdate = document.getElementById('led-red-slider'),
-
-noUiSlider.on('update', function(){
-	addClassFor(lUpdate, 'tShow', 450);
-});
