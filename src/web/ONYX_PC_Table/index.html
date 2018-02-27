@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+  <meta charset="utf-8">
+  <title>ONYX PC TABLE</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic" rel="stylesheet">
+</head>
+<body>
+
+  <header class="masthead" role="banner">
+    <strong class="logo">
+      <img class="logo-img logo-img-small" src="img/logo-small.svg" alt="Space Control">
+      <img class="logo-img logo-img-big" src="img/logo.svg" alt="Space Control">
+    </strong>
+    <h1 class="title">ONYX PC Table</h1>
+    <nav class="nav-wrap" role="navigation">
+      <button class="nav-btn" aria-controls="nav" aria-expanded="false"><i class="nav-icon">Toggle Navigation</i></button>
+      <ul class="nav" id="nav" aria-hidden="true">
+        <li>
+          <span class="nav-label"><span class="nav-label-back">LEDs</span></span>
+          <ol>
+            <li><a href="#">Program</a></li>
+            <li><a href="#">Manual control</a></li>
+          </ol>
+        </li>
+        <li>
+          <span class="nav-label"><span class="nav-label-back">Table Fans and Temps</span></span>
+          <ol>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Fan curves</a></li>
+          </ol>
+        </li>
+        <li>
+          <span class="nav-label"><span class="nav-label-back">PC Stats</span></span>
+          <ol>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">CPU temps</a></li>
+            <li><a href="#">GPU temps</a></li>
+          </ol>
+        </li>
+        <li>
+        <li>
+          <span class="nav-label"><span class="nav-label-back">Settings</span></span>
+          <ol>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Colours</a></li>
+
+          </ol>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main">
+
+    <article class="panel farthest">
+      <h2 class="panel-head section-label" tabindex="0"><span class="section-label-back">Farthest distance</span></h2>
+      <div class="farthest-wrap">
+        <p class="farthest-km"><strong id="length" data-max="19692258000">19 692 258 000 km</strong></p>
+        <p class="farthest-probe">Voyageur 1</p>
+      </div>
+    </article>
+
+    <article class="panel distances">
+      <h2 class="panel-head section-label" tabindex="0"><span class="section-label-back">Probe distances</span></h2>
+      <div>
+        <svg class="bar-chart" viewBox="0 0 1000 821.8">
+          <title>Distances of farthest probes from Earth.</title>
+          <style>
+            .st0{fill:#6c8fe0;} .st1{fill:#6c8fe0;} .st2{fill:#6c8fe0;} .st3{fill:#6c8fe0;} .st4{fill:#fff;font-family:Ubuntu} .st5{font-size:52.7692px;} .st6{font-size:37.6923px;} .st7{font-size:40.2051px;} .st8{fill:none;stroke:#233e75;stroke-width:5;}
+          </style>
+          <g class="bar-wrap">
+            <path id="bar-voy-1" d="M765.6 422.2h199v30.6h-199z" class="bar st0"/>
+          </g>
+          <g class="bar-wrap">
+            <path id="bar-voy-2" d="M546.7 347.8h199v105h-199z" class="bar st1"/>
+          </g>
+          <g class="bar-wrap">
+            <path id="bar-nh" d="M327.7 94h199v358.7h-199z" class="bar st2"/>
+          </g>
+          <g class="bar-wrap">
+            <path id="bar-cas" d="M108.8 22.5h199v430.2h-199z" class="bar st3"/>
+          </g>
+          <text transform="matrix(0 -1 1 0 204.475 739.456)">
+            <tspan x="0" y="0" class="st4 st5">Voyageur 1</tspan><tspan x="84" y="45.2" class="st4 st6">19.86 B km</tspan>
+          </text>
+          <text transform="matrix(0 -1 1 0 427.26 739.456)">
+            <tspan x="0" y="0" class="st4 st5">Voyageur 2</tspan><tspan x="84" y="45.2" class="st4 st6">16.41 B km</tspan>
+          </text>
+          <text transform="matrix(0 -1 1 0 646.202 800.298)">
+            <tspan x="0" y="0" class="st4 st5">New Horizons</tspan><tspan x="187.4" y="45.2" class="st4 st6">4.8 B km</tspan>
+          </text>
+          <text transform="matrix(0 -1 1 0 865.145 631.651)">
+            <tspan x="0" y="0" class="st4 st5">Cassini</tspan><tspan x="-2.5" y="45.2" class="st4 st6">1.43 B km</tspan>
+          </text>
+          <text transform="translate(32.675 467.33)" class="st4 st7" aria-hidden="true">0</text>
+          <text transform="translate(10 248.72)" class="st4 st7" aria-hidden="true">10</text>
+          <path d="M83.5 452.8H990" class="st8"/>
+          <path d="M83.5 452.8V22.5" class="st8"/>
+          <path d="M83.5 452.8H65" class="st8"/>
+          <path d="M83.5 234.2H65" class="st8"/>
+        </svg>
+      </div>
+    </article>
+
+    <article class="panel">
+      <h2 class="panel-head section-label" tabindex="0"><span class="section-label-back">Probe details</span></h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Probe details including launch date &amp; destination.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Probe</th>
+              <th scope="col">Launch date</th>
+              <th scope="col">Destination</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Juno</th>
+              <td><time datetime="2011-08-05">Aug. 5, 2011</time></td>
+              <td>Jupiter</td>
+            </tr>
+            <tr>
+              <th scope="row">Rosetta</th>
+              <td><time datetime="2004-03-02">Mar. 2, 2004</time></td>
+              <td>Comet 67P/Churyumov-Gerasimenko</td>
+            </tr>
+            <tr>
+              <th scope="row">Okras</th>
+              <td><time datetime="2010-05-20">May 20, 2010</time></td>
+              <td>Venus</td>
+            </tr>
+            <tr>
+              <th scope="row">Shin’en 2</th>
+              <td><time datetime="2014-12-03">Dec. 3, 2014</time></td>
+              <td>Heliocentric orbit</td>
+            </tr>
+            <tr>
+              <th scope="row">Gaia</th>
+              <td><time datetime="2013-12-19">Dec. 19, 2013</time></td>
+              <td>Sun-Earth L2 point</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+
+    <article class="panel">
+      <h2 class="panel-head section-label" tabindex="0"><span class="section-label-back">Probe destination</span></h2>
+
+      <div class="tab-group">
+        <ul class="tabs clearfix" role="tablist">
+          <li class="tab" role="presentation"><a href="#pluto" role="tab" aria-controls="pluto" aria-selected="true">Pluto</a></li>
+          <li class="tab" role="presentation"><a href="#67pcg" role="tab" aria-controls="67pcg">67P/C-G</a></li>
+          <li class="tab" role="presentation"><a href="#jupiter" role="tab" aria-controls="jupiter">Jupiter</a></li>
+        </ul>
+
+        <div class="tab-panels">
+          <div class="tab-panel" id="pluto" role="tabpanel" aria-hidden="false">
+            <img class="flex-img details-img" src="img/pluto.jpg" alt="Composite photo of Pluto taken by New Horizons">
+            <dl class="details">
+              <dt>Name</dt>
+              <dd>Pluto</dd>
+              <dt>Discovery year</dt>
+              <dd>1930</dd>
+              <dt>Discovered by</dt>
+              <dd>Clyde W. Tombaugh</dd>
+            </dl>
+          </div>
+          <div class="tab-panel" id="67pcg" role="tabpanel" aria-hidden="true">
+            <img class="flex-img details-img" src="img/cg.jpg" alt="Photo taken by the Rosetta spacecraft">
+            <dl class="details">
+              <dt>Name</dt>
+              <dd>67P/C-G</dd>
+              <dt>Discovery year</dt>
+              <dd>1969</dd>
+              <dt>Discovered by</dt>
+              <dd>Klim Ivanovych Churyumov, Svetlana Ivanovna Gerasimenko</dd>
+            </dl>
+          </div>
+          <div class="tab-panel" id="jupiter" role="tabpanel" aria-hidden="true">
+            <img class="flex-img details-img" src="img/jupiter.jpg" alt="Photo of Jupiter taken by New Horizons during its gravity assist">
+            <dl class="details">
+              <dt>Name</dt>
+              <dd>Jupiter</dd>
+              <dt>Discovery year</dt>
+              <dd>7–8 BCE</dd>
+              <dt>Discovered by</dt>
+              <dd>Babylonian astronomers</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
