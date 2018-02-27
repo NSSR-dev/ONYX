@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+  <meta charset="utf-8">
+  <title>ONYX PC TABLE</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic" rel="stylesheet">
+  <link href="css/nouislider.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <header class="masthead" role="banner">
+    <strong class="logo">
+      <img class="logo-img logo-img-small" src="img/logo-small.svg" alt="Space Control">
+      <img class="logo-img logo-img-big" src="img/logo.svg" alt="Space Control">
+    </strong>
+    <h1 class="title">Table LEDs - Manual Control</h1>
+    <nav class="nav-wrap" role="navigation">
+      <button class="nav-btn" aria-controls="nav" aria-expanded="false"><i class="nav-icon">Toggle Navigation</i></button>
+      <ul class="nav" id="nav" aria-hidden="true">
+        <li>
+          <span class="nav-label"><span class="nav-label-back">LEDs</span></span>
+          <ol>
+            <li><a href="#">Program</a></li>
+            <li><a href="#">Manual control</a></li>
+          </ol>
+        </li>
+        <li>
+          <span class="nav-label"><span class="nav-label-back">Table Fans and Temps</span></span>
+          <ol>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Fan curves</a></li>
+          </ol>
+        </li>
+        <li>
+          <span class="nav-label"><span class="nav-label-back">PC Stats</span></span>
+          <ol>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">CPU temps</a></li>
+            <li><a href="#">GPU temps</a></li>
+          </ol>
+        </li>
+        <li>
+        <li>
+          <span class="nav-label"><span class="nav-label-back">Settings</span></span>
+          <ol>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Colours</a></li>
+
+          </ol>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main role="main">
+
+    <div class="slidecontainer">
+      <input type="range" min="0" max="255" value="50" class="slider" id="led-red-slider">
+    </div>
+
+  </main>
+
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="js/wNumb.js"></script>
+  <script src="js/nouislider.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

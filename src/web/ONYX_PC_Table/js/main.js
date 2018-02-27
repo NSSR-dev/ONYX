@@ -80,3 +80,76 @@ $tabs.on('click', 'a', function (e) {
   $(this).attr('aria-selected', true);
   $(id).attr('aria-hidden', false);
 });
+
+
+
+
+
+
+
+/*
+var slider = document.getElementById("led-red-slider");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+    output.innerHTML = this.value;
+}
+*/
+
+/*
+var featured = document.getElementById("led-red-slider");
+if( "ontouchstart" in window ) {
+    var touchStart = function(evt) {
+        var startTime = (new Date()).getTime();
+        var startX = evt.changedTouches[0].pageX;
+        var touchEnd = function(evt) {
+            document.removeEventListener("touchend", touchEnd);
+            var diffX = evt.changedTouches[0].pageX - startX;
+            var elapsed = (new Date()).getTime() - startTime;
+            console.log( "Swiped " + diffX + " pixels in " + elapsed + " milliseconds" );
+            if( elapsed < 200 && Math.abs(diffX) > 50 ) {
+                ( diffX < 0 ) ? slideright() : slideleft();
+            }
+        }
+        document.addEventListener("touchend", touchEnd);
+    };
+    featured.addEventListener("touchstart", touchStart);
+}
+*/
+
+var range = document.getElementById('led-red-slider');
+
+range.style.height = '5vw';
+range.style.width = '60vw';
+range.style.margin = '10vw 10vw 30px';
+
+noUiSlider.create(range, {
+	start: [ 0 ], // 1 handle, starting at...
+	margin: 0, // Handles must be at least 300 apart
+	connect: true, // Display a colored bar between the handles
+	direction: 'ltr', // Put '0' at the bottom of the slider
+	orientation: 'horizontal', 
+	behaviour: 'tap-drag', // Move handle on tap, bar is draggable
+	step: 1,
+	tooltips: true,
+	format: wNumb({
+		decimals: 0
+	}),
+	range: {
+		'min': 0,
+		'max': 255
+	},
+	pips: { // Show a scale with the slider
+		mode: 'steps',
+		stepped: true,
+		density: 4
+	}
+});
+
+var lUpdate = document.getElementById('led-red-slider'),
+
+noUiSlider.on('update', function(){
+	addClassFor(lUpdate, 'tShow', 450);
+});
