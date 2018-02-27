@@ -119,13 +119,13 @@ if( "ontouchstart" in window ) {
 }
 */
 
-var range = document.getElementById('led-red-slider');
+var ledRedSlider = document.getElementById('led-red-slider');
 
-range.style.height = '5vw';
-range.style.width = '60vw';
-range.style.margin = '10vw 10vw 30px';
+ledRedSlider.style.height = '5vw';
+ledRedSlider.style.width = '60vw';
+ledRedSlider.style.margin = '10vw 10vw 30px';
 
-noUiSlider.create(range, {
+noUiSlider.create(ledRedSlider, {
 	start: [ 0 ], // 1 handle, starting at...
 	margin: 0, // Handles must be at least 300 apart
 	connect: true, // Display a colored bar between the handles
