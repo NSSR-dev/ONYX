@@ -446,9 +446,28 @@ tbody th {
   width: 25%;
 }
 
+/*
+.led-table-colour-sliders{
+  display        : inline-block; 
+	*display       : inline; 
+	zoom           : 1; 
+	vertical-align : top; 
+  font-size      : 12px;
+  height: 40px;
+}
+*/
 
-
-
+#led-red-slider, #led-green-slider , #led-blue-slider {
+  margin-top : 50px;
+  margin-bottom : 80px;
+}
+#led-white-slider{
+  margin-top : 50px;
+  margin-bottom : 40px;
+}
+#led-table-slider-values{
+/*MIDDLE ALIGHN THIS*/
+}
 
 
 

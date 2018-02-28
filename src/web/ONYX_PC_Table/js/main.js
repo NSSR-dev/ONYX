@@ -126,6 +126,17 @@ var ledBlueSlider = document.getElementById('led-blue-slider');
 var ledWhiteSlider = document.getElementById('led-white-slider');
 var ledBrightnessSlider = document.getElementById('led-brightness-slider');
 
+var ledColourSliders = document.getElementsByClassName('led-table-colour-sliders');
+
+var sliderValuesText = document.getElementById("led-table-slider-values").innerHTML;
+
+var colors = [0,0,0,0];
+
+//ledColourSliders.style.height = '20px';
+//ledColourSliders.style.width = '400px';
+//ledColourSliders.style.margin = '8vw 0px 30px';
+
+/*
 ledRedSlider.style.height = '20px';
 ledRedSlider.style.width = '400px';
 ledRedSlider.style.margin = '8vw 0px 30px';
@@ -145,7 +156,74 @@ ledWhiteSlider.style.margin = '10vw 0px 30px';
 ledBrightnessSlider.style.height = '300px';
 ledBrightnessSlider.style.width = '20px';
 ledBrightnessSlider.style.margin = '60px 50px 30px';
+*/
+[].slice.call(ledColourSliders).forEach(function( slider, index ){
+	noUiSlider.create(slider, {
+		start: [ 0 ], // 1 handle, starting at...
+		margin: 0, // Handles must be at least 300 apart
+		connect: true, // Display a colored bar between the handles
+		direction: 'ltr', // Put '0' at the bottom of the slider
+		orientation: 'horizontal', 
+		behaviour: 'tap-drag', // Move handle on tap, bar is draggable
+		step: 1,
+		tooltips: true,
+		format: wNumb({
+			decimals: 0
+		}),
+		range: {
+			'min': 0,
+			'max': 255
+		},
+		pips: { // Show a scale with the slider
+			mode: 'range',
+			stepped: true,
+			density: 5
+		}
+	})
 
+	slider.noUiSlider.on('update', function ( ) {
+	
+		colors[index] = slider.noUiSlider.get();
+		
+	
+		
+
+		//WANT THIS IN HEX FORMAT!!
+		//var color = '#(' + colors.join(',') + ')';
+		var color = colors.join("");
+		//var color ='';
+
+		var e = colors[0].toString(16);
+		var x = 'RGBW: ' + colors.join(',');
+
+		var c = 100;
+
+		//sprintf("%.4X", (colors[0] << 24) + (colors[1] << 16) + (colors[2] << 8) + colors[3]);
+	
+/*
+		for(var i = 0; i < colors.length ; i++) {
+			color += ((colors[i] < 16) ? "0":"") + colors[i].toString(16);
+		}
+		*/
+
+		//var color = 
+
+		sliderValuesText = color;
+
+		document.getElementById("led-table-slider-values").innerHTML = x;
+
+		//document.getElementById("led-table-slider-values").innerHTML = color;
+		
+		});
+
+
+
+
+
+});
+
+
+/*
 noUiSlider.create(ledRedSlider, {
 	start: [ 0 ], // 1 handle, starting at...
 	margin: 0, // Handles must be at least 300 apart
@@ -262,13 +340,15 @@ noUiSlider.create(ledBrightnessSlider, {
 });
 
 
-
+*/
 
 function ledStripButtonManual(red, green, blue, white) {
+	document.getElementById("led-table-slider-values").innerHTML = "Paragraph changed!";
 	ledRedSlider.noUiSlider.set(red);
 	ledGreenSlider.noUiSlider.set(green);
 	ledBlueSlider.noUiSlider.set(blue);
 	ledWhiteSlider.noUiSlider.set(white);
+	
 }
 
 
