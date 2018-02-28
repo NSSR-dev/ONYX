@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="css/main.css" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic" rel="stylesheet">
-  <link href="css/nouislider.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -15,7 +14,7 @@
       <img class="logo-img logo-img-small" src="img/logo-small.svg" alt="Space Control">
       <img class="logo-img logo-img-big" src="img/logo.svg" alt="Space Control">
     </strong>
-    <h1 class="title">Table LEDs - Manual Control</h1>
+    <h1 class="title">ONYX PC Table</h1>
     <nav class="nav-wrap" role="navigation">
       <button class="nav-btn" aria-controls="nav" aria-expanded="false"><i class="nav-icon">Toggle Navigation</i></button>
       <ul class="nav" id="nav" aria-hidden="true">
@@ -23,7 +22,7 @@
           <span class="nav-label"><span class="nav-label-back">LEDs</span></span>
           <ol>
             <li><a href="#">Program</a></li>
-            <li><a href="#">Manual control</a></li>
+            <li><a href="leds_manual.html">Manual control</a></li>
           </ol>
         </li>
         <li>
@@ -47,7 +46,7 @@
           <span class="nav-label"><span class="nav-label-back">Settings</span></span>
           <ol>
             <li><a href="#">Account</a></li>
-            <li><a href="settings_colours.html">Colours</a></li>
+            <li><a href="#">Colours</a></li>
 
           </ol>
         </li>
@@ -57,30 +56,10 @@
 
   <main role="main">
 
-    <div id="led-manual-container">
 
-      <div id="led-manual-brightness" >
-        <div id="led-brightness-slider" class="noUiSlider"></div>
-      </div>
-
-      <div id="led-manual-rgbw" >
-        <div id="led-red-slider" class="noUiSlider"></div>
-        <div id="led-green-slider" class="noUiSlider"></div>
-        <div id="led-blue-slider" class="noUiSlider"></div>
-        <div id="led-white-slider" class="noUiSlider"></div>
-      </div>
-      
-      <div id="led-manual-buttons" >
-        <button id="ledRedButton" class="button" onclick="ledStripButtonManual(255,0,0,0)">Red</button>
-        <button id="ledGreenButton" class="button" onclick="ledStripButtonManual(0,255,0,0)">Green</button>
-        <button id="ledBlueButton" class="button" onclick="ledStripButtonManual(0,0,255,0)">Blue</button>
-        <button id="ledWhiteButton" class="button" onclick="ledStripButtonManual(0,0,0,255)">White</button>
-      </div>
-
-    </div>
-  
 
   </main>
+  
 
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="js/wNumb.js"></script>

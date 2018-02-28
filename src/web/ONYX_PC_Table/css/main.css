@@ -375,5 +375,154 @@ tbody th {
 }
 
 
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#ledRedButton{
+  position: absolute;
+  top   : 10%;
+  right : 10%;
+}
+
+#ledGreenButton{
+  position: absolute;
+  top   : 30%;
+  right : 10%;
+}
+
+#ledBlueButton{
+  position: absolute;
+  top   : 50%;
+  right : 10%;
+}
+
+#ledWhiteButton{
+  position: absolute;
+  top   : 70%;
+  right : 10%;
+}
 
 
+#led-manual-container{
+  height: 100%;
+  width:100%;
+  font-size: 0;
+}
+
+
+#led-manual-brightness, #led-manual-rgbw, #led-manual-buttons{
+  display        : inline-block; 
+	*display       : inline; 
+	zoom           : 1; 
+	vertical-align : top; 
+  font-size      : 12px;
+}
+
+#led-manual-brightness {
+  width: 20%;
+}
+#led-manual-rgbw{
+  width: 50%;
+}
+#led-manual-buttons{
+  width: 25%;
+}
+
+
+
+
+
+
+
+#red, #green, #blue {
+  margin: 10px;
+  display: inline-block;
+  height: 200px;
+}
+
+#colorpicker {
+  height: 240px;
+  width: 310px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #BFBFBF;
+}
+
+#result {
+  margin: 60px 26px;
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  vertical-align: top;
+  color: rgb(127, 127, 127);
+  background: rgb(127, 127, 127);
+  border: 1px solid #fff;
+  box-shadow: 0 0 10px;
+}
+
+#red .noUi-connect {
+  background: #c0392b;
+}
+
+#green .noUi-connect {
+  background: #27ae60;
+}
+
+#blue .noUi-connect {
+  background: #2980b9;
+}
+#red, #green, #blue {
+  margin: 10px;
+  display: inline-block;
+  height: 200px;
+}
+
+#colorpicker {
+  height: 240px;
+  width: 310px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #BFBFBF;
+}
+
+#result {
+  margin: 60px 26px;
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  vertical-align: top;
+  color: rgb(127, 127, 127);
+  background: rgb(127, 127, 127);
+  border: 1px solid #fff;
+  box-shadow: 0 0 10px;
+}
+
+#red .noUi-connect {
+  background: #c0392b;
+}
+
+#green .noUi-connect {
+  background: #27ae60;
+}
+
+#blue .noUi-connect {
+  background: #2980b9;
+}
